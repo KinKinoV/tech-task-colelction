@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve flaskExample project
+After=network.target
+
+[Service]
+User=your-user-name
+Group=www-data
+WorkingDirectory=/path/to/cloudfresh-test-task/python_app
+Environment="PATH=/path/to/cloudfresh-test-task/venv/bin"
+ExecStart=/path/to/cloudfresh-test-task/venv/bin/gunicorn --workers 3 --bind unix:flaskExample.sock -m 007 "flaskExample:create_app()"
+
+[Install]
+WantedBy=multi-user.target

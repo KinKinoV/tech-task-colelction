@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %} Homepage {% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <h3 class="center-align">Welcome to the test Flask site{% if g.user['username'] %}, {{ g.user['username']}}!{% else %}!{% endif %}</h3>
+    </div>
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="center promo">
+          <i class="large material-icons">flash_on</i>
+          <p class="promo-caption">Fast site</p>
+          <p class="light center">This site offers fast load times and good experience. It was developed using Python <a href="https://flask.palletsprojects.com/en/3.0.x/">Flask</a> framework.</p>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="center promo">
+          <i class="large material-icons">visibility</i>
+          <p class="promo-caption">Simple example</p>
+          <p class="light center">The site you are seeing right now is just an example one for the test task.</p>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="center promo">
+          <i class="large material-icons">thumb_up</i>
+          <p class="promo-caption">Good design</p>
+          <p class="light center">Hopefully this site appeals to you design wise. I used <a href="https://materializecss.com/about.html">Materialize</a> CSS framework for this site.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

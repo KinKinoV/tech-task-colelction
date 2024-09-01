@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Registering new user{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <br>
+  <h1 class="header center teal-text">Registration</h1>
+  <div class="row">
+    <form class="col s12" method="post">
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Username" id="username" name="username" type="text" class="validate" required>
+          <label for="username">Username in system</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Minimum 8 symbols in ranges of: A-Z, a-z, 0-9" id="password" type="password" name="password" class="validate" required>
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+          <button class="btn waves-effect waves-light" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock content %}
